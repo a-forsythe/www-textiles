@@ -1,0 +1,32 @@
+{
+  "name": "@a-forsythe/www-textiles",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a-forsythe/www-textiles.git"
+  },
+  "author": "Alex Forsythe",
+  "description": "Frontend app that depends on weaver (which depends on spinner)",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "start": "npx vite",
+    "build": "npx vite build"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.9",
+    "@types/react-dom": "^18.2.4",
+    "@vitejs/plugin-react": "^4.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3",
+    "vite": "^4.3.9"
+  },
+  "dependencies": {
+    "@a-forsythe/weaver": "^0.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

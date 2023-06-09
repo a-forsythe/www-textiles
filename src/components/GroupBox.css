@@ -1,0 +1,14 @@
+.group-box {
+  border: 1px solid #666;
+  margin: 12px;
+}
+
+.group-box-label {
+  padding: 2px 4px;
+  background-color: #333;
+  border-bottom: 1px solid #666;
+}
+
+.group-box-contents {
+  padding: 8px;
+}

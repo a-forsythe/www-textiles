@@ -1,0 +1,28 @@
+name: www-textiles CI
+on:
+  push: {}
+jobs:
+  build:
+    name: Release www-textiles
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      # Check out latest changes
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Set up a Node build environment and install dependencies
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+          registry-url: https://npm.pkg.github.com
+          scope: "@a-forsythe"
+      - name: Install dependencies
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm ci
+
+      # Run vite build to verify that we can build for production
+      - name: Build
+        run: npm run build
